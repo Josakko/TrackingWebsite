@@ -1,14 +1,14 @@
 async function getInfo() {
-    try {
-      const response = await fetch('https://ipapi.co/json/');
-      const data = await response.json();
-      
-      const info = `ip: ${data.ip}, city: ${data.city}, region: ${data.region}, country: ${data.country_name}, postal: ${data.postal}, browser: ${navigator.userAgent}`
-      
-      return info;
-    } catch (e) {
-      return null;
-    }
+  try {
+    const response = await fetch('https://ipapi.co/json/');
+    const data = await response.json();
+    
+    const info = `ip: ${data.ip}, city: ${data.city}, region: ${data.region}, country: ${data.country_name}, postal: ${data.postal}, browser: ${navigator.userAgent}`
+    
+    return info;
+  } catch (e) {
+    return null;
+  }
 }
 
 const getAndSendInfo = true;
